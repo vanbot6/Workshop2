@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const taskInput = document.getElementById('new-task');
     const taskList = document.getElementById('to-do-list');
 
-    // Load tasks from local storage
+    // Load tasks 
     loadTasks();
 
     form.addEventListener('submit', (e) => {
@@ -21,14 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
     function addTask(task, crossedOff) {
         const li = document.createElement('li');
 
-        // Create task content
+        // Create task 
         const taskContent = document.createElement('span');
         taskContent.textContent = task;
         if (crossedOff) {
             taskContent.classList.add('crossed-off');
         }
 
-        // Add click event to cross off the task
+        //  cross off a task
         taskContent.addEventListener('click', () => {
             taskContent.classList.toggle('crossed-off');
             toggleCrossOffTask(task);
@@ -43,11 +43,11 @@ document.addEventListener('DOMContentLoaded', () => {
             removeTask(task);  // Remove the task from local storage
         });
 
-        // Append content and button to the list item
+        // Append list item
         li.appendChild(taskContent);
         li.appendChild(deleteButton);
 
-        // Append the list item to the task list
+        // Append list
         taskList.appendChild(li);
     }
 
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function loadTasks() {
         let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
-        // If no tasks are found in local storage, add default tasks
+        // add default tasks
         if (tasks.length === 0) {
             tasks = [
                 { task: "Create Concept", crossedOff: false },

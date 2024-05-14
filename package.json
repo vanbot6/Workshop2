@@ -7,10 +7,14 @@
     "start": "live-server"
   },
   "keywords": [],
-  "author": "",
+  "author": "nathan",
   "license": "ISC",
-  "description": "",
+  "description": "none",
   "dependencies": {
     "live-server": "^1.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "week 2"
   }
 }

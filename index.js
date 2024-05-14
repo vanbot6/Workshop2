@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         deleteButton.classList.add('delete-button');
         deleteButton.addEventListener('click', () => {
             li.remove();  // Remove the task element from the DOM
-            removeTask(task);  // Remove the task from local storage
+            removeTask(task);  // Remove the task from local storaage
         });
 
         // Append list item

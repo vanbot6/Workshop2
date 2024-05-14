@@ -1,1 +1,5 @@
-console.log('My code is running');
+function checkSystemStatus() {
+    return 'my system is running';
+}
+
+console.log(checkSystemStatus());
